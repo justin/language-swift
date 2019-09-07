@@ -1,0 +1,10 @@
+{
+  "name": "language-swift-dev",
+  "version": "0.0.1",
+  "description": "Yet another attempt at parsing Swift in Atom.",
+  "author": "Justin Williams <justinw@me.com> (https://justinw.me)",
+  "license": "MIT",
+  "dependencies": {
+    "tree-sitter-swift": "file:../tree-sitter-swift"
+  }
+}

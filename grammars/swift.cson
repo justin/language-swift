@@ -1,0 +1,29 @@
+name: 'Swift'
+scopeName: 'source.swift'
+type: 'tree-sitter'
+parser: 'tree-sitter-swift'
+
+fileTypes: ['swift']
+
+comments:
+  start: '// '
+
+scopes:
+  'program': 'source.swift'
+
+  'identifier': [
+    {
+      exact: 'import',
+      scopes: 'support.function'
+    },
+    {
+      match: '^[\$A-Z_]{2,}$',
+      scopes: 'constant.other'
+    },
+    {
+      match: '^[A-Z]',
+      scopes: 'meta.class'
+    },
+  ]
+
+  'line_comment': 'comment.line'
