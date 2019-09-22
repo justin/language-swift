@@ -1,3 +1,5 @@
+# reference https://macromates.com/manual/en/language_grammars
+
 name: 'Swift'
 scopeName: 'source.swift'
 type: 'tree-sitter'
@@ -11,19 +13,42 @@ comments:
 scopes:
   'program': 'source.swift'
 
-  'identifier': [
+  'comment': [
     {
-      exact: 'import',
-      scopes: 'support.function'
+       # Identify 2-3 forward slashes as a line comment.
+       match: "^//{2}",
+       scopes: 'comment.line'
     },
-    {
-      match: '^[\$A-Z_]{2,}$',
-      scopes: 'constant.other'
-    },
-    {
-      match: '^[A-Z]',
-      scopes: 'meta.class'
-    },
+    # Otherwise, assume it's a block comment.
+    'comment.block'
   ]
 
-  'line_comment': 'comment.line'
+  # Access Control
+  'modifier': 'storage.modifier'
+
+  # Data types
+  '"class"': 'keyword.class'
+  '"struct"': 'keyword.struct'
+  '"enum"': 'keyword.enum'
+  '"protocol"': 'storage.type'
+  '"extension"': 'storage.modifier'
+
+  '"final"': 'storage.modifier'
+
+  'class_declaration > identifier': 'storage.class'
+  'struct_declaration > identifier': 'storage.struct'
+
+  # Variables
+  '"var"': 'storage.modifier'
+  '"let"': 'storage.modifier'
+
+  # Primitive Types
+  '"nil"': 'constant.language.nil'
+  '"true"': 'constant.language.true'
+  '"false"': 'constant.language.false'
+  'static_string_literal': 'string.quoted'
+
+  # Functions
+  '"func"': 'keyword.function'
+
+  'function_declaration > identifier': 'entity.name.function'
