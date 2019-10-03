@@ -26,6 +26,13 @@ scopes:
   # Access Control
   'modifier': 'storage.modifier'
 
+  '"import"': 'keyword.control.directive'
+  '"#if"': 'keyword.control.directive'
+  '"#elseif"': 'keyword.control.directive'
+  '"#else"': 'keyword.control.directive'
+  '"#endif"': 'keyword.control.directive'
+  'build_configuration_statement': 'keyword.control.directive'
+
   # Data types
   '"class"': 'keyword.class'
   '"struct"': 'keyword.struct'
@@ -34,9 +41,23 @@ scopes:
   '"extension"': 'storage.modifier'
 
   '"final"': 'storage.modifier'
+  '"override"': 'storage.modifier'
 
   'class_declaration > identifier': 'storage.class'
   'struct_declaration > identifier': 'storage.struct'
+
+  '"if"': 'keyword.control'
+  '"else"': 'keyword.control'
+  '"do"': 'keyword.control'
+  '"for"': 'keyword.control'
+  '"while"': 'keyword.control'
+  '"break"': 'keyword.control'
+  '"continue"': 'keyword.control'
+  '"return"': 'keyword.control'
+  '"switch"': 'keyword.control'
+  '"case"': 'keyword.control'
+  '"default"': 'keyword.control'
+  '"where"': 'keyword.control'
 
   # Variables
   '"var"': 'storage.modifier'
