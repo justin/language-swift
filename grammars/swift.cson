@@ -25,6 +25,8 @@ scopes:
 
   # Access Control
   'modifier': 'storage.modifier'
+  '"final"': 'storage.modifier'
+  '"override"': 'storage.modifier'
 
   '"import"': 'keyword.control.directive'
   '"#if"': 'keyword.control.directive'
@@ -40,13 +42,11 @@ scopes:
   '"protocol"': 'storage.type'
   '"extension"': 'storage.modifier'
 
-  '"final"': 'storage.modifier'
-  '"override"': 'storage.modifier'
-
   'class_declaration > identifier': 'storage.class'
   'struct_declaration > identifier': 'storage.struct'
 
   '"if"': 'keyword.control'
+  '"guard"': 'keyword.control'
   '"else"': 'keyword.control'
   '"do"': 'keyword.control'
   '"for"': 'keyword.control'
@@ -58,6 +58,14 @@ scopes:
   '"case"': 'keyword.control'
   '"default"': 'keyword.control'
   '"where"': 'keyword.control'
+  '"throw"': 'keyword.control'
+  '"try"': 'keyword.control'
+  '"catch"': 'keyword.control'
+  '"as"': 'keyword.control'
+  '"in"': 'keyword.operator.in'
+
+  '"get"': 'keyword.operator.setter'
+  '"set"': 'keyword.operator.setter'
 
   # Variables
   '"var"': 'storage.modifier'
