@@ -72,10 +72,11 @@ scopes:
   '"let"': 'storage.modifier'
 
   # Primitive Types
-  '"nil"': 'constant.language.nil'
-  '"true"': 'constant.language.true'
-  '"false"': 'constant.language.false'
-  'static_string_literal': 'string.quoted'
+  'nil': 'constant.language.nil'
+  'string': 'string.quoted.double'
+  'boolean': 'constant.language.bool'
+  'number': 'constant.numeric'
+  'type_identifier': 'support.storage.type'
 
   # Functions
   '"func"': 'keyword.function'
