@@ -84,5 +84,6 @@ scopes:
 
   # Functions
   '"func"': 'keyword.function'
-
   'function_declaration > identifier': 'entity.name.function'
+  'function_declaration > type': 'support.storage.type'
+  'parameter_declaration > type': 'support.storage.type'
