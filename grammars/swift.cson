@@ -87,3 +87,5 @@ scopes:
   'function_declaration > identifier': 'entity.name.function'
   'function_declaration > type': 'support.storage.type'
   'parameter_declaration > type': 'support.storage.type'
+  '"throws"': 'keyword.control'
+  '"rethrows"': 'keyword.control'
