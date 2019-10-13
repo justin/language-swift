@@ -63,6 +63,8 @@ scopes:
   '"catch"': 'keyword.control'
   '"as"': 'keyword.control'
   '"in"': 'keyword.operator.in'
+  "'associatedtype'": 'storage.type'
+  "'typealias'": 'keyword.other.typealias'
 
   '"get"': 'keyword.operator.setter'
   '"set"': 'keyword.operator.setter'
@@ -89,3 +91,7 @@ scopes:
   'parameter_declaration > type': 'support.storage.type'
   '"throws"': 'keyword.control'
   '"rethrows"': 'keyword.control'
+
+  # Protocols
+  'protocol_declaration > identifier': 'storage.type.protocol'
+  'associatedtype_declaration > identifier': 'entity.name.associatedtype'
