@@ -78,7 +78,7 @@ scopes:
   'string': 'string.quoted.double'
   'boolean': 'constant.language.bool'
   'number': 'constant.numeric'
-  'type_identifier': 'support.storage.type'
+  'type': 'support.storage.type'
   '
     variable_declaration > type,
     constant_declaration > type
