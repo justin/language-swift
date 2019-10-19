@@ -74,15 +74,24 @@ scopes:
   '"let"': 'storage.modifier'
 
   # Primitive Types
+  'standard_type': 'support.type.swift'
+  'type_identifier': 'support.type'
   'nil': 'constant.language.nil'
   'string': 'string.quoted.double'
   'boolean': 'constant.language.bool'
   'number': 'constant.numeric'
-  'type': 'support.storage.type'
+  "'Array'": 'support.storage.type'
+  "'Dictionary'": 'support.storage.type'
+
   '
     variable_declaration > type,
     constant_declaration > type
   ': 'support.storage.type'
+
+  '
+    variable_declaration > identifier,
+    constant_declaration > identifier
+  ': 'support.variable'
 
   # Functions
   '"func"': 'keyword.function'
