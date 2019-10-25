@@ -25,8 +25,10 @@ scopes:
 
   # Access Control
   'modifier': 'storage.modifier'
-  '"final"': 'storage.modifier'
   '"override"': 'storage.modifier'
+  '"static"': 'storage.modifier'
+  '"lazy"': 'storage.modifier'
+  '"weak"': 'storage.modifier'
 
   '"import"': 'keyword.control.directive'
   '"#if"': 'keyword.control.directive'
@@ -43,7 +45,9 @@ scopes:
   '"extension"': 'storage.modifier'
 
   'class_declaration > identifier': 'storage.class'
+  'class_declaration > modifier': 'storage.modifier'
   'struct_declaration > identifier': 'storage.struct'
+  'struct_declaration > modifier': 'storage.modifier'
 
   '"if"': 'keyword.control'
   '"guard"': 'keyword.control'
@@ -89,12 +93,16 @@ scopes:
   ': 'support.storage.type'
 
   '
+    variable_declaration > modifier,
+    constant_declaration > modifier': 'storage.modifier'
+  '
     variable_declaration > identifier,
     constant_declaration > identifier
   ': 'support.variable'
 
   # Functions
   '"func"': 'keyword.function'
+  'function_declaration > modifier': 'storage.modifier'
   'function_declaration > identifier': 'entity.name.function'
   'function_declaration > type': 'support.storage.type'
   'parameter_declaration > type': 'support.storage.type'
@@ -103,4 +111,8 @@ scopes:
 
   # Protocols
   'protocol_declaration > identifier': 'storage.type.protocol'
+  'protocol_declaration > modifier': 'storage.modifier'
   'associatedtype_declaration > identifier': 'entity.name.associatedtype'
+
+  # Extensions
+  'extension_declaration > identifier': 'storage.type'
